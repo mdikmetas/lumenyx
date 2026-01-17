@@ -929,6 +929,12 @@ start_node() {
         --chain mainnet \
         --validator \
         --rpc-cors all \
+        --mining-threads $(nproc) \
+        --execution compiled \
+        --wasm-execution compiled \
+        --db-cache 32768 \
+        --state-cache-size 4096 \
+        --rpc-cors all \
         --unsafe-rpc-external \
         --rpc-methods Unsafe \
         $bootnode_args \
